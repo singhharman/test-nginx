@@ -4,7 +4,7 @@ The high leve explanation of the test nginx lab. The lab includes deployment of 
 2. ec2-instance
 3. alb
 
-**networking **
+#**networking **
 
 
 
