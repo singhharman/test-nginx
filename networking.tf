@@ -10,7 +10,7 @@ terraform {
 # AWS provider, default region and profile
 provider "aws" {
   profile = "default"
-  region  = "us-east-1"
+  region  = "us-east-1b"
 }
 
 # declare default subnet for Avalability Zone 1
