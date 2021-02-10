@@ -5,11 +5,12 @@ resource "aws_instance" "test_101" {
   security_groups = [
     aws_security_group.allow_rule_webserver.id
   ]
-  subnet_id = aws_default_subnet.df_subnet.id
+  subnet_id = aws_default_subnet.df_subnet_az1.id
   root_block_device {
     volume_size = 30
     volume_type = "standard"
   }
+  iam_instance_profile = aws_iam_instance_profile.test101_profile.name
   associate_public_ip_address = true
   user_data                   = file("install-nginx.sh")
   tags = {

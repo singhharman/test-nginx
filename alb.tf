@@ -5,7 +5,7 @@ resource "aws_alb" "test_alb_101" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.allow_rule_alb.id]
   subnets = [
-    aws_default_subnet.df_subnet.id,
+    aws_default_subnet.df_subnet_az1.id,
     aws_default_subnet.df_subnet_az2.id
   ]
 
@@ -32,7 +32,7 @@ resource "aws_lb_target_group" "nginx-tg" {
   name        = "nginx-tg"
   port        = 80
   protocol    = "HTTP"
-  vpc_id      = aws_default_subnet.df_subnet.vpc_id
+  vpc_id      = aws_default_subnet.df_subnet_az1.vpc_id
   target_type = "instance"
 
 }

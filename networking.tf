@@ -35,7 +35,7 @@ resource "aws_default_subnet" "df_subnet_az2" {
 resource "aws_security_group" "allow_rule_webserver" {
   name        = "allow_rule_webserver"
   description = "Allow ssh inbound traffic"
-  vpc_id      = aws_default_subnet.df_subnet.vpc_id
+  vpc_id      = aws_default_subnet.df_subnet_az1.vpc_id
 
   ingress {
     description = "SSH"
@@ -75,7 +75,7 @@ resource "aws_security_group" "allow_rule_webserver" {
 resource "aws_security_group" "allow_rule_alb" {
   name        = "allow_rule_alb"
   description = "Allow ssh inbound traffic"
-  vpc_id      = aws_default_subnet.df_subnet.vpc_id
+  vpc_id      = aws_default_subnet.df_subnet_az1.vpc_id
 
   ingress {
     description = "http"
