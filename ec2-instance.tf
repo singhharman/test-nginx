@@ -18,5 +18,3 @@ resource "aws_instance" "test_101" {
 }
 
 
-
-
