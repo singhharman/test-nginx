@@ -1,5 +1,4 @@
-./diagrams/Current Solution.png?raw=true "Nginx Deployment"
-
+![Screenshot](./diagrams/Current Solution.png)
 
 # **Test-Nginx**
 The high leve explanation of the test nginx lab. The lab includes deployment of an Nginx web server and publish it on the web using ALB. The test-nginx lab is constructed using terraform. There are three main files.
