@@ -1,6 +1,4 @@
-:!test(main/diagrams/Current Solution.png)
-
-[logo]: https://github.com/singhharman/test-nginx/main/diagrams/Current Solution.png "Logo Title Text 2"
+![](diagrams/CurrentSolution.png)
 
 # **Test-Nginx**
 The high leve explanation of the test nginx lab. The lab includes deployment of an Nginx web server and publish it on the web using ALB. The test-nginx lab is constructed using terraform. There are three main files.
