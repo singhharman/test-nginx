@@ -1,4 +1,3 @@
-Reference-style: 
 ![] https://github.com/singhharman/test-nginx/blob/main/diagrams/CurrentSolution.png
 
 # **Test-Nginx**
