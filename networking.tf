@@ -10,7 +10,7 @@ terraform {
 # AWS provider, default region and profile
 provider "aws" {
   profile = "default"
-  region  = "us-east-1b"
+  region  = "us-east-1"
 }
 
 # declare default subnet for Avalability Zone 1
@@ -18,7 +18,7 @@ resource "aws_default_subnet" "df_subnet_az1" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name = "df_us-east-1"
+    Name = "df_us-east-1a"
   }
 }
 
