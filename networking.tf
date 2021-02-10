@@ -78,7 +78,7 @@ resource "aws_security_group" "allow_rule_alb" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["99.235.138.16/32"]
+    cidr_blocks = ["0.0.0.0/0"]
 
   }
   egress {

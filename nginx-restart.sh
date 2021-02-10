@@ -6,6 +6,6 @@ then
 else
     echo "$SERVICE stopped"
     # uncomment to start nginx if stopped
-    # systemctl start nginx
+    service nginx start
     # mail  
 fi
