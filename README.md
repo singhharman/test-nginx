@@ -1,4 +1,4 @@
-![Alt text](diagrams/Current Solution.png?raw=true "Nginx Deployment")
+diagrams/Current Solution.png?raw=true "Nginx Deployment"
 
 
 # **Test-Nginx**
