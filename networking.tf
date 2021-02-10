@@ -7,12 +7,14 @@ terraform {
   }
 }
 
+# AWS provider, default region and profile
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
 }
 
-resource "aws_default_subnet" "df_subnet" {
+# declare default subnet for Avalability Zone 1
+resource "aws_default_subnet" "df_subnet_az1" {
   availability_zone = "us-east-1a"
 
   tags = {
@@ -20,7 +22,7 @@ resource "aws_default_subnet" "df_subnet" {
   }
 }
 
-
+# declare default subnet for Avalability Zone 2 
 resource "aws_default_subnet" "df_subnet_az2" {
   availability_zone = "us-east-1b"
 
@@ -28,7 +30,8 @@ resource "aws_default_subnet" "df_subnet_az2" {
     Name = "df_us-east-1b"
   }
 }
-
+ 
+# create security group for the nginx server (SSH & http for specific public)
 resource "aws_security_group" "allow_rule_webserver" {
   name        = "allow_rule_webserver"
   description = "Allow ssh inbound traffic"
@@ -68,6 +71,7 @@ resource "aws_security_group" "allow_rule_webserver" {
   }
 }
 
+# create security group for load balance with listner port http open to the public
 resource "aws_security_group" "allow_rule_alb" {
   name        = "allow_rule_alb"
   description = "Allow ssh inbound traffic"

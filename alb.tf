@@ -1,3 +1,4 @@
+# create load balancer 
 resource "aws_alb" "test_alb_101" {
   name               = "test-alb-test-101"
   internal           = false
@@ -13,6 +14,8 @@ resource "aws_alb" "test_alb_101" {
   }
 }
 
+
+# create a listner for the loadbalancer
 resource "aws_lb_listener" "front_end" {
   load_balancer_arn = aws_alb.test_alb_101.arn
   port              = "80"
@@ -24,6 +27,7 @@ resource "aws_lb_listener" "front_end" {
   }
 }
 
+# create a target group for the loadbalancer
 resource "aws_lb_target_group" "nginx-tg" {
   name        = "nginx-tg"
   port        = 80
@@ -33,7 +37,7 @@ resource "aws_lb_target_group" "nginx-tg" {
 
 }
 
-
+# create a target group attachment for the loadbalancer
 resource "aws_lb_target_group_attachment" "nginx_servers" {
   target_group_arn = aws_lb_target_group.nginx-tg.arn
   target_id        = aws_instance.test_101.id
