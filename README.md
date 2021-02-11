@@ -1,7 +1,7 @@
  ![](diagrams/CurrentSolution.png)
 
 ## **Test-Nginx**
-The high leve explanation of the test nginx lab. The lab includes deployment of an Nginx web server and publish it on the web using ALB. The test-nginx lab is constructed using terraform. There are three main files.
+The read gives a high level explanation of the test nginx lab. The lab includes deployment of a *Nginx* web server and publish it on the web using ALB. The test-nginx lab is constructed using terraform. There are three main files.
 1. networking
 2. ec2-instance
 3. alb
@@ -15,7 +15,7 @@ The networking terraform file contains all the networking related code. The deta
 3. Security Groups
 
 ## ec2-instance
-The ec2-instance terraform file contains code to deploy EC2 instance with below configuration. The "install-nginx.sh" script is used for installing the ngnix server at the startup. The script also creates a version.txt file that highlights the nginx version. 
+The ec2-instance terraform file contains code to deploy EC2 instance with below configuration. The *install-nginx.sh* script is used for installing the ngnix server at the startup. The script also creates a version.txt file that highlights the nginx version. 
 - Operating System: Amazon Linux 2
 - Instance Type: t2.micro
 - HardDisk: 30 GB
