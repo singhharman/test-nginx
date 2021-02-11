@@ -26,7 +26,7 @@ The alb terraform file contains code to deploy application load balance related 
 4. Target Group Attachment
 
 
-##Ideal Infrastructure
+## Ideal Infrastructure
 The ideal infrastructure design would to include a zone file hosted Route53 and a certificate installed on the ALB. The certificate can be generated using Amazon Certificate Manager which is a free certificate service to be consumed. It can be only achived if you have public domain. I am afraid I don't have a public domain.  
 
  ![](diagrams/EndSolution.png)
