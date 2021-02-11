@@ -1,5 +1,6 @@
 resource "aws_instance" "test_101" {
-  ami           = "ami-0e5b37ba2c8e7cc82"
+ # ami           = "ami-0e5b37ba2c8e7cc82"
+  ami            = "ami-047a51fa27710816e"
   instance_type = "t2.micro"
   key_name      = "webserver"
   security_groups = [

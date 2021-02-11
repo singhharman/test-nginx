@@ -5,7 +5,6 @@ then
     echo "$SERVICE is running"
 else
     echo "$SERVICE stopped"
-    # uncomment to start nginx if stopped
-    service nginx start
-    # mail  
+    # start nginx if stopped
+    sudo service nginx start
 fi

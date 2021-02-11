@@ -19,16 +19,19 @@ resource "aws_iam_role" "test101_role" {
 resource "aws_iam_role_policy" "test101_policy" {
   name = "test101_policy"
   role = aws_iam_role.test101_role.id
-  policy = <<EOF
+policy = <<EOF
 {
 "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "s3:*",
-            "Resource": "arn:aws:s3:::artifacts.harmantraining"
-        }
+"Statement": [
+    {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": "s3:*",
+        "Resource": [
+        "arn:aws:s3:::artifacts.harmantraining",
+        "arn:aws:s3:::artifacts.harmantraining/*"
+        ]
+    }
     ]
 }
 EOF
